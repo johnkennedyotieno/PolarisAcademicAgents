@@ -7,6 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500&display=swap');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body { 
     font-family: 'Inter', sans-serif; 
     background-color: #F8F5EE; 
@@ -14,12 +18,14 @@ body {
     margin: 0; 
     padding: 0; 
     line-height: 1.75; 
-    font-size: 13px; 
+    font-size: 14px; 
     scroll-behavior: smooth; 
 }
-h1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; color: #0D1B3E; }
-h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 20px; color: #2A4A7F; margin-top: 30px; }
-h3 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px; color: #2A4A7F; margin-top: 20px; }
+
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; color: #0D1B3E; margin-top: 0; }
+h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 22px; color: #2A4A7F; margin-top: 30px; }
+h3 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 18px; color: #2A4A7F; margin-top: 20px; }
+p { margin-bottom: 16px; }
 
 nav { 
     background-color: #0D1B3E; 
@@ -29,21 +35,39 @@ nav {
     position: sticky; 
     top: 0; 
     z-index: 1000; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
-nav a { color: #F8F5EE; text-decoration: none; margin: 0 10px; font-size: 14px; }
+nav a { color: #F8F5EE; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s; }
+nav a:hover { color: #C9A84C; }
 
-section { padding: 60px 20px; border-bottom: 1px solid #E0DCD0; }
-.container { max-width: 800px; margin: 0 auto; }
+section { padding: 80px 20px; border-bottom: 1px solid #E0DCD0; }
+.container { width: 100%; max-width: 800px; margin: 0 auto; }
 
-.hero-section { background-color: #0D1B3E; color: #F8F5EE; padding: 100px 20px; text-align: center; border: none; }
-.hero-section h1 { color: #F8F5EE; margin-bottom: 10px; }
-.hero-section p { font-size: 16px; max-width: 800px; margin: 0 auto 30px auto; }
+.hero-section { background-color: #0D1B3E; color: #F8F5EE; padding: 120px 20px; text-align: center; border: none; }
+.hero-section h1 { color: #F8F5EE; margin-bottom: 15px; font-size: 40px; }
+.hero-section p { font-size: 18px; max-width: 800px; margin: 0 auto 30px auto; }
 
-.btn { display: inline-block; background-color: #2A4A7F; color: #FFFFFF; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 500; margin-top: 20px; }
+.btn { display: inline-block; background-color: #2A4A7F; color: #FFFFFF; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: 500; margin-top: 10px; transition: background-color 0.3s; }
 .btn-gold { background-color: #C9A84C; color: #0D1B3E; }
+.btn-gold:hover { background-color: #b59540; }
 
-footer { background-color: #0D1B3E; color: #F8F5EE; padding: 20px; text-align: center; font-size: 14px; }
-ul { padding-left: 20px; }
+footer { background-color: #0D1B3E; color: #F8F5EE; padding: 30px 20px; text-align: center; font-size: 14px; }
+ul { padding-left: 20px; margin-bottom: 16px; }
+li { margin-bottom: 8px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    .hero-section h1 { font-size: 32px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 16px; }
+    section { padding: 50px 15px; }
+    .hero-section { padding: 80px 15px; }
+    .hero-section p { font-size: 16px; }
+}
 </style>
 </head>
 <body>
@@ -63,3 +87,88 @@ ul { padding-left: 20px; }
 </section>
 
 <section id="about">
+    <div class="container">
+        <h1>Who We Are</h1>
+        <p>Polaris Academic Agents is a study abroad guidance agency based in Kisumu, Kenya. We are licensed by the Commission for University Education (CUE) as a Student Recruitment Agency, and we operate under the ICEF Code of Conduct and the London Statement on the Ethical Recruitment of International Students.</p>
+        <p>We share what the brochures don't tell you. We ask the questions other agents skip. And when we give you advice, it is backed by deep knowledge, genuine care, and the hard lessons of lived experience.</p>
+        <p>Our role is to help you get there. Not to hijack the journey.</p>
+        
+        <h2>Purpose</h2>
+        <p>To ensure that no student steps into an international education journey unprepared, misled, or alone.</p>
+        
+        <h2>Vision</h2>
+        <p>A world where every ambitious student has access to world-class, honest guidance that matches their goals, their context, and their values.</p>
+        
+        <h2>Mission</h2>
+        <p>To provide full-journey study abroad guidance - from first conversation to first week abroad - rooted in lived experience, radical honesty, and a genuine desire to see every student succeed on their own terms.</p>
+        
+        <h2>Brand Pillars & Messaging</h2>
+        <h3>Honest Guidance</h3>
+        <p>We tell you what others won't. Our advice is never shaped by which schools pay us the most commission. Every recommendation is student-first, backed by knowledge and experience. Polaris earns from your trust, not your confusion.</p>
+        
+        <h3>Full-Journey Support</h3>
+        <p>We don't disappear after the visa is stamped. We prepare you for what life actually looks and feels like from packing the right clothes to setting up your first week for success. The destination is not the finish line. Arrival is the starting line.</p>
+        
+        <h3>Lived Experience</h3>
+        <p>Our guidance comes from someone who has made this journey - including the hard parts. That is the most valuable thing we offer. We were one of them. Now we make sure the next one is better prepared.</p>
+        
+        <h3>Your Journey, Your Way</h3>
+        <p>We help you get there. We don't choose for you. The journey only has value when you make it of your own volition and complete it with your own effort. Our role is to clear the path, not to walk it for you.</p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h1>Services We Provide</h1>
+        
+        <h2>Initial Consultation</h2>
+        <p>A comprehensive one-to-one session to understand your academic background, aspirations, budget, and destination preferences. We assess your profile honestly and outline realistic pathways — including the ones you may not have considered.</p>
+        
+        <h2>University & Pathway Matching</h2>
+        <p>We identify and recommend accredited universities and programmes that match your academic profile, budget, and career goals. All recommended institutions are CUE-approved and hold valid MoUs with Polaris. We recommend what fits you — not what pays us most.</p>
+        
+        <h2>University Application Support</h2>
+        <p>We guide you through every step of your application — personal statement coaching, document preparation, referee briefings, and submission. We review all materials for accuracy and completeness. MD sign-off required before any application is transmitted.</p>
+        
+        <h2>Visa Application Guidance</h2>
+        <p>We provide current, accurate guidance on visa requirements, documentation, and timelines for your destination country. We prepare you thoroughly — but we are clear: we do not guarantee visa outcomes. We guarantee honest preparation.</p>
+        
+        <h2>Pre-Departure Preparation</h2>
+        <p>We prepare you for what arrival actually looks like — accommodation guidance, cost of living briefings, banking, health requirements, cultural adjustment, and academic expectations at your enrolled institution. The destination is not the finish line. Arrival is the starting line.</p>
+        
+        <h2>Post-Placement Follow-Up</h2>
+        <p>We stay with you after you land. We check in on welfare and academic progress and remain available to assist with any issues arising in the first semester of enrolment. Your journey does not end at the visa stamp.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p><strong>Office Address:</strong> [Full Street Address], Kisumu, Kenya</p>
+        <p><strong>Postal Address:</strong> [P.O. Box], Kisumu</p>
+        <p><strong>Email:</strong> info@polarisacademic.co.ke</p>
+        <p><strong>Telephone / WhatsApp:</strong> [Phone Number]</p>
+        <p><strong>Website:</strong> www.polarisacademic.co.ke</p>
+        
+        <h2>Operating Hours</h2>
+        <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
+        <p>Saturday: 9:00 AM – 1:00 PM</p>
+        <p>Public Holidays: Closed</p>
+        
+        <h2>Feedback, Complaints & Escalation</h2>
+        <p>We welcome feedback — it makes us better. If our service falls short of the standards set out in this Charter, we want to know, and we will act.</p>
+        <ul>
+            <li>Speak directly with your assigned Polaris counsellor at any time.</li>
+            <li>Email us at info@polarisacademic.co.ke with the subject line 'Feedback' or 'Complaint'.</li>
+            <li>Visit our office in Kisumu during business hours.</li>
+            <li>Use the feedback form on our website at www.polarisacademic.co.ke.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <p>Polaris Academic Agents - Guiding your journey.</p>
+</footer>
+
+</body>
+</html>
