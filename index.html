@@ -3,45 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home - Polaris Academic Agents</title>
+<title>Polaris Academic Agents</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500&display=swap');
-body { font-family: 'Inter', sans-serif; background-color: #F8F5EE; color: #3D3530; margin: 0; padding: 0; line-height: 1.75; font-size: 13px; }
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #F8F5EE; 
+    color: #3D3530; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.75; 
+    font-size: 13px; 
+    scroll-behavior: smooth; 
+}
 h1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; color: #0D1B3E; }
-h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 20px; color: #2A4A7F; }
-h3 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px; color: #2A4A7F; }
-.hero { background-color: #0D1B3E; color: #F8F5EE; padding: 100px 20px; text-align: center; }
-.hero h1 { color: #F8F5EE; margin-bottom: 10px; }
-.hero p { font-size: 16px; max-width: 800px; margin: 0 auto 30px auto; }
+h2 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 20px; color: #2A4A7F; margin-top: 30px; }
+h3 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px; color: #2A4A7F; margin-top: 20px; }
+
+nav { 
+    background-color: #0D1B3E; 
+    padding: 15px 20px; 
+    text-align: center; 
+    border-bottom: 1px solid #C9A84C; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+nav a { color: #F8F5EE; text-decoration: none; margin: 0 10px; font-size: 14px; }
+
+section { padding: 60px 20px; border-bottom: 1px solid #E0DCD0; }
+.container { max-width: 800px; margin: 0 auto; }
+
+.hero-section { background-color: #0D1B3E; color: #F8F5EE; padding: 100px 20px; text-align: center; border: none; }
+.hero-section h1 { color: #F8F5EE; margin-bottom: 10px; }
+.hero-section p { font-size: 16px; max-width: 800px; margin: 0 auto 30px auto; }
+
 .btn { display: inline-block; background-color: #2A4A7F; color: #FFFFFF; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 500; margin-top: 20px; }
 .btn-gold { background-color: #C9A84C; color: #0D1B3E; }
-nav { background-color: #0D1B3E; padding: 15px 20px; text-align: center; border-bottom: 1px solid #C9A84C; }
-nav a { color: #F8F5EE; text-decoration: none; margin: 0 10px; font-size: 14px; }
-.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-footer { background-color: #0D1B3E; color: #F8F5EE; padding: 20px; text-align: center; font-size: 14px; margin-top: 40px; border-top: 1px solid #C9A84C; }
-.social-links a { color: #C9A84C; margin: 0 5px; text-decoration: none; }
+
+footer { background-color: #0D1B3E; color: #F8F5EE; padding: 20px; text-align: center; font-size: 14px; }
+ul { padding-left: 20px; }
 </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact Us</a>
 </nav>
 
-<div class="hero">
-    <h1>Guiding your journey.[cite: 2]</h1>
-    <p>Polaris Academic Agents is the only study abroad agency in the region that combines deep institutional knowledge with the lived experience of someone who has made the journey offering honest, full-arc guidance from first inquiry through the first weeks of life in a new country.[cite: 2]</p>
-    <p>We guide every student to the right university, in the right country, at the right budget - not just to get them there, but to make sure they thrive once they arrive.[cite: 2]</p>
-    <a href="contact.html" class="btn btn-gold">Your journey starts here.</a>
-</div>
+<section id="home" class="hero-section">
+    <h1>Guiding your journey.</h1>
+    <p>Polaris Academic Agents is the only study abroad agency in the region that combines deep institutional knowledge with the lived experience of someone who has made the journey offering honest, full-arc guidance from first inquiry through the first weeks of life in a new country.</p>
+    <p>We guide every student to the right university, in the right country, at the right budget - not just to get them there, but to make sure they thrive once they arrive.</p>
+    <a href="#contact" class="btn btn-gold">Your journey starts here.</a>
+</section>
 
-<footer>
-    <p>Polaris Academic Agents - Guiding your journey.[cite: 2]</p>
-    <p class="social-links"><a href="#">LinkedIn</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a></p>
-</footer>
-
-</body>
-</html>
+<section id="about">
